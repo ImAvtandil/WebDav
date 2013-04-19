@@ -1686,7 +1686,6 @@ class Client
                 $ret_struct[ 'status' ][ 'status-code' ],
                 $ret_struct[ 'status' ][ 'reason-phrase' ]) = explode( ' ',
                 $lines[ 0 ], 3 );
-        var_dump($ret_struct);
         // print "HTTP Version: '$http_version' Status-Code: '$status_code' Reason Phrase: '$reason_phrase'<br>";
         // get the response header fields
         // See http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html#sec6
