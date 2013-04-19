@@ -1708,12 +1708,14 @@ class Client
                 $fieldvalue = str_replace( "http+++/", "http:/", $fieldvalue );
                 // check if this header was allready set (apache 2.0 webdav module does this....).
                 // If so we add the the value to the end the fieldvalue, separated by comma...
+                if(array_key_exists("header", $ret_struct)){
                 if ( !$ret_struct[ 'header' ][ $fieldname ] )
                 {
                     $ret_struct[ 'header' ][ $fieldname ] = trim( $fieldvalue );
                 } else
                 {
                     $ret_struct[ 'header' ][ $fieldname ] .= ',' . trim( $fieldvalue );
+                }
                 }
             }
         }
